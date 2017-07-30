@@ -30,7 +30,7 @@ func GetCountryNames() (names []string) {
 	return
 }
 
-// When querying for Canada country code 1 it will return US only.
+// When querying for Canada country code 1 will return US only.
 func FindByCode(code int)(country Country){
 	for _, v := range countries {
 		if v.CountryCode == code && v.CountryISO == "us"  {

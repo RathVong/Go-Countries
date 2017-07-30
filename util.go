@@ -16,7 +16,6 @@ func ConvertStringToInt(s string) int {
 
 	defer func() { if err != nil {
 		log.Panicf("Country.ConvertStringToInt -> Error: ", err)
-		c = 0
 	} }()
 
 	return int(c)
