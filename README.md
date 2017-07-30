@@ -1,7 +1,7 @@
 # Go-Countries
 A Simple Countries Utilities For GO
 
-<<<<<<< HEAD
+
 
 =======
 This utility is meant for quick country selection activites. Enjoy!
@@ -48,5 +48,4 @@ To get the entire list of country names ->
 
   
   
-  
->>>>>>> 50c1e9688af0e2593f81cd3ed3e2e94e951d6313
+
