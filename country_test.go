@@ -11,10 +11,9 @@ func TestCountry_Get(t *testing.T) {
 
 	if country.Name != "Canada"{
 		t.Errorf("Searching for Canada, found -> %+v", country)
-		t.FailNow()
+	} else {
+		log.Println("TestCountry_Get() Pass.")
 	}
-
-	log.Println("TestCountry_Get() Pass.")
 }
 
 func TestCountry_FindByCode(t *testing.T) {
@@ -22,10 +21,8 @@ func TestCountry_FindByCode(t *testing.T) {
 	country := FindByCode(1)
 
 	if country.CountryCode != 1 {
-		t.Errorf("Searching for country with code 1, found %+v", country )
-
+		t.Errorf("Searching for country with code 1, found %+v", country)
 	} else {
-
 		log.Println("TestCountry_FindByCode() Pass.")
 	}
 }
@@ -49,17 +46,16 @@ func TestCountry_GetCountryNames(t *testing.T) {
 
 	if n != 233 {
 		t.Errorf("TestCountry_GetCountryNames() -> Returned %v", n)
-	} else if !validateCountryNames(names) {
+	} else if !validateCountryNamesIsNotEmpty(names) {
 		t.Errorf("TestCountry_GetCountryNames() Country names are incorrect")
 	}else {
-
 		log.Println("TestCountry_GetCountryNames() Pass.")
 	}
 
 
 }
 
-func validateCountryNames (names []string) (isValidated bool){
+func validateCountryNamesIsNotEmpty(names []string) (isValidated bool){
 	for _, v := range names {
 
 		if len(v) == 0 {
