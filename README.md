@@ -46,15 +46,16 @@ To get the entire list of country names ->
 
 Data structure
 --------------------------------
-    Incase you planning on marshalling to json, here are the
-    struct and keys.
 
-       type Country struct {
-	        Name           string `json:"name"`
-	        CountryISO     string `json:"country_iso"`
-	        CountryCode    int    `json:"country_code"`
-	        CountryCodeSTR string `json:"country_code_str"`
-       }
+  Incase you are planning on marshalling to json, here are the
+  struct and keys.
+
+           type Country struct {
+	            Name           string `json:"name"`
+	            CountryISO     string `json:"country_iso"`
+	            CountryCode    int    `json:"country_code"`
+	            CountryCodeSTR string `json:"country_code_str"`
+           }
 
 
   
