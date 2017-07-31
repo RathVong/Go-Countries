@@ -3,10 +3,10 @@ package country
 import "strings"
 
 type Country struct {
-	Name string
-	CountryISO string
-	CountryCode int
-	CountryCodeSTR string
+	Name           string `json:"name"`
+	CountryISO     string `json:"country_iso"`
+	CountryCode    int    `json:"country_code"`
+	CountryCodeSTR string `json:"country_code_str"`
 }
 
 
