@@ -3,14 +3,14 @@ A Simple Countries Utilities For GO
 
 
 
-=======
 This utility is meant for quick country selection activites. Enjoy!
 
 
 
 
 
-to install -> 
+Installation
+-------------------------------
     go get "github.com/RathVong/Go-Countries"
  
     import "github.com/RathVong/Go-Countries"
@@ -43,7 +43,18 @@ To get the entire list of country names ->
 
     names := country.GetCountryNames()
     
-    
+
+Data structure
+--------------------------------
+    Incase you planning on marshalling to json, here are the
+    struct and keys.
+
+       type Country struct {
+	        Name           string `json:"name"`
+	        CountryISO     string `json:"country_iso"`
+	        CountryCode    int    `json:"country_code"`
+	        CountryCodeSTR string `json:"country_code_str"`
+       }
 
 
   
