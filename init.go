@@ -26,11 +26,7 @@ func Init() {
 }
 
 func addCountry(n string, iso string, code int, codeStr string) (country Country) {
-	country.Name = n
-	country.CountryISO = iso
-	country.CountryCode = code
-	country.CountryCodeSTR = codeStr
-	return
+	return Country{Name: n, CountryISO:iso, CountryCode:code, CountryCodeSTR:codeStr}
 }
 
 func parseDataFile(filename string) (err error){
