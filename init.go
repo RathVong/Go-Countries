@@ -7,7 +7,11 @@ import (
 	"log"
 )
 
-const (countryFileName = "countries.dat")
+const (
+	countryFileName = "countries.dat"
+	newlineSeparator = "\n"
+	commaSeparator = ","
+)
 
 func Init() {
 	f, err := os.Open(countryFileName)
@@ -42,7 +46,7 @@ func parseDataFile(filename string) (err error){
 }
 
 func populateRows(b []byte) {
-	data := strings.Split(string(b), "\n")
+	data := strings.Split(string(b), newlineSeparator)
 
 	for _, row := range data {
 		populateFields(row)
@@ -52,7 +56,7 @@ func populateRows(b []byte) {
 }
 
 func populateFields(row string){
-	field := strings.Split(row, ",")
+	field := strings.Split(row, commaSeparator)
 	countries[strings.ToLower(field[0])] = addCountry(field[0],
 									 field[1],
 							         ConvertStringToInt(field[2]),
